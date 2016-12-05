@@ -1,0 +1,43 @@
+，What happens when you initialize a repository? Why do you need to do it?
+
+It'll create a folder called .git. 
+Because then we could keep track of the files in the repository,after initializing a repository.
+
+，How is the staging area different from the working directory and the repository? What value do you think it offers?
+The staging area is an intermediate area where I can add changes before committing them to the repository.
+It makes the commits more valuable,since the commits history is easier to navigate when I create one commit per logical change.
+
+，How can you use the staging area to make sure you have one commit per logical change?
+ Add the changes of one logical change to the staging area, then commit them from the staging area.
+
+，What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+ Branches would be helpful when you want to out a new experimental feature which you're still not sure will work,or maybe you want to make series versions of your project.A branch is just a copy of the master,what you do to the branch would not change the master,so you can do what you want to the branch.
+
+，How do the diagrams help you visualize the branch structure?
+ The diagrams show what the parent of each commit is.When there are multiple branches,I can use the diagrams to easily see that what changes will be part of each branch.They also let me easily see what commits each branch refers to.
+The diagram shows the commit history of each branch,and then you can know the branch structure from the diagram.
+
+，What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+ The result is a combined commit with all changes from both branches.
+ In the diagram which we represent we can know the parent of the commit no matter whether we merge the branches or not.
+
+，What are the pros and cons of Git¨s automatic merging vs. always doing merges manually?
+
+    Git's automatic merging can save the user a lot of time!  Especially when
+    multiple people are working together, merging everything manually could be
+    very painful.
+
+    The downside of automatic merging is that it's not perfect.  Merging the
+    coins branch with the master branch, which included color, resulted in
+    inconsistent visuals, where most items were colored but the coins were not.
+    Git could even make worse mistakes - for example, if one branch deleted a
+    function, and another branch added a call to that function, Git would merge
+    those together with no conflict and the resulting code would be broken.
+
+    Overall, Git's merging can save a lot of time, but it's important to always
+    double check that the code still works after doing a merge.
+
+
+
+
+
